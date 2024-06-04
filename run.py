@@ -42,10 +42,10 @@ def get_and_save_image_to_file(image_url, output_dir):
 
 
 def main():
-    url = "https://nettruyencc.com/truyen-tranh/ta-la-ta-de/chuong-1/341928"
+    url = "https://blogtruyen.vn/c849046/onepunch-man-chapter-247"
     content = get_content_from_url(url)
     image_urls = parse_image_urls(
-        content=content, classes="page-chapter", location="img", source="data-src"
+        content=content, classes="images", location="img", source="src"
     )
     save_urls_to_csv(image_urls)
 
